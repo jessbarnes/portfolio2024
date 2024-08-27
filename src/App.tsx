@@ -4,6 +4,8 @@ import Work from "./sections/work";
 import Projects from "./sections/projects";
 import Skills from "./sections/skills";
 import Footer from "./sections/footer";
+import Navigation from "./sections/navigation";
+import Contact from "./sections/contact";
 
 function App() {
   const [scrolledPastNav, setScrolledPastNav] = useState(false);
@@ -15,6 +17,8 @@ function App() {
   const skillsRef = useRef<HTMLDivElement>(null);
 
   const sections = ["work", "projects", "skills", "contact"];
+
+  const anchorStyle = "h-0 m-0 pb-24";
 
   const scrollTo = (location: string) => {
     switch (location) {
@@ -38,29 +42,6 @@ function App() {
     }
   };
 
-  const Navigation = () => (
-    <div
-      className={`flex flex-row items-center justify-between w-full px-12 lg:justify-evenly ${
-        scrolledPastNav
-          ? "fixed top-0 bg-gradient-to-b from-white via-white/50 to-transparent pt-6 pb-12"
-          : "py-6"
-      }`}
-    >
-      {(scrolledPastNav ? ["top", ...sections] : sections).map((s) => (
-        <button
-          onClick={() => scrollTo(s)}
-          className={`font-bold uppercase lg:text-lg ${
-            scrolledPastNav
-              ? "text-blue-800 hover:text-black"
-              : "text-white hover:text-blue-900"
-          }`}
-        >
-          {s}
-        </button>
-      ))}
-    </div>
-  );
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolledPastNav(window.scrollY > 300);
@@ -71,19 +52,20 @@ function App() {
 
   return (
     <div className="body-container">
-      <div className="h-0 m-0 p-0" ref={topRef} />
       <Header />
-      <Navigation />
-      <div className="h-0 m-0 p-0 pb-24" ref={workRef} />
+      <Navigation
+        scrolledPastNav={scrolledPastNav}
+        scrollTo={scrollTo}
+        sections={sections}
+      />
+      <div className={anchorStyle} ref={workRef} />
       <Work />
-      <div className="h-[1000px]">1000px height buffer</div>
-      <div className="h-0 m-0 p-0 pb-24" ref={projectsRef} />
+      <div className={anchorStyle} ref={projectsRef} />
       <Projects />
-      <div className="h-[1000px]">1000px height buffer</div>
-      <div className="h-0 m-0 p-0 pb-24" ref={skillsRef} />
+      <div className={anchorStyle} ref={skillsRef} />
       <Skills />
-      <div className="h-[1000px]">1000px height buffer</div>
-      <div className="h-0 m-0 p-0 pb-24" ref={contactRef} />
+      <div className={anchorStyle} ref={contactRef} />
+      <Contact />
       <Footer />
     </div>
   );
