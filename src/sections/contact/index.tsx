@@ -29,6 +29,17 @@ const Contact = () => {
                   !
                 </p>
                 <p>
+                  Interested in my work? You can access my resume{" "}
+                  <a
+                    href="https://docs.google.com/document/d/1eugwMY0P6FvfDmU5DucNTVkJw1EH_35L9iLS5ftrMTQ/edit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    here
+                  </a>
+                  .
+                </p>
+                <p>
                   Feel free to reach out to me at{" "}
                   <a href="mailto:jessicamarb98@gmail.com">
                     jessicamarb98@gmail.com
