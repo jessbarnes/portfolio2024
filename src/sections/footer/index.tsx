@@ -39,7 +39,7 @@ const Footer = () => {
               <AiFillLinkedin className="clickable-white-icon" />
             </a>
           </div>
-          <p className="text-xs md:text-sm -mb-2">© Jessica Barnes 2024</p>
+          <p className="text-xs md:text-sm -mb-2">© JB 2024</p>
         </div>
       </div>
     </>

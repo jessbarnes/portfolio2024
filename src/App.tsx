@@ -9,7 +9,6 @@ import Contact from "./sections/contact";
 import Stars from "./components/Stars";
 
 function App() {
-  const topRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -22,7 +21,7 @@ function App() {
   const scrollTo = (location: string) => {
     switch (location) {
       case "top":
-        topRef.current?.scrollIntoView();
+        window.scrollTo(0, 0);
         break;
       case "work":
         workRef.current?.scrollIntoView();
@@ -45,7 +44,6 @@ function App() {
     <div className="body-container overflow-x-hidden">
       <Navigation scrollTo={scrollTo} sections={sections} />
       <Stars position="top" />
-      <div className={anchorStyle} ref={topRef} />
       <Header />
       <div className={anchorStyle} ref={workRef} />
       <Work />

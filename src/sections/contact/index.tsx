@@ -14,11 +14,11 @@ const Contact = () => {
             alt="profile"
           />
           <RowCard
-            title="Thank you for checking out my portfolio!"
+            title="Thank you for your interest!"
             body={
               <div className="flex flex-col gap-2 pt-2">
                 <p>
-                  Don't forget to take a peek at my source code on{" "}
+                  Check out the site's source code on{" "}
                   <a
                     href="https://github.com/jessbarnes/portfolio2024"
                     target="_blank"
@@ -26,10 +26,10 @@ const Contact = () => {
                   >
                     github
                   </a>
-                  !
+                  ! I built it from scratch.
                 </p>
                 <p>
-                  Interested in my work? You can access my resume{" "}
+                  Want to build something together? Access my resume{" "}
                   <a
                     href="https://docs.google.com/document/d/1eugwMY0P6FvfDmU5DucNTVkJw1EH_35L9iLS5ftrMTQ/edit"
                     target="_blank"
@@ -37,10 +37,10 @@ const Contact = () => {
                   >
                     here
                   </a>
-                  .
+                  !
                 </p>
                 <p>
-                  Feel free to reach out to me at{" "}
+                  Don't hesitate to reach out to me at{" "}
                   <a href="mailto:jessicamarb98@gmail.com">
                     jessicamarb98@gmail.com
                   </a>
@@ -48,6 +48,7 @@ const Contact = () => {
                 </p>
               </div>
             }
+            expandable={false}
           />
         </div>
       </div>
