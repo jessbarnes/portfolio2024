@@ -11,9 +11,6 @@ const tools: string[] = [
   "Tuple",
   "Vercel",
   "Notion",
-  "Procreate",
-  "MediBangPaintPro",
-  "Adobe Photoshop",
 ];
 
 export default tools;
