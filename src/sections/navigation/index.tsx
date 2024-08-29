@@ -2,26 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navigation = ({
-  scrolledPastNav,
   scrollTo,
   sections,
 }: {
-  scrolledPastNav: boolean;
   scrollTo: (section: string) => void;
   sections: string[];
 }) => {
   const bodyRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
-
-  const backgroundColor = () => {
-    if (scrolledPastNav && !isOpen) {
-      return "bg-gradient-to-b from-blue-400 via-blue-400/50 to-transparent";
-    } else if (isOpen) {
-      return "bg-blue-400";
-    } else {
-      return "";
-    }
-  };
 
   useEffect(() => {
     if (bodyRef.current) {
@@ -43,13 +31,15 @@ const Navigation = ({
 
   return (
     <>
-      {(scrolledPastNav || isOpen) && <div className="h-[72px]" />}
       <div
         ref={bodyRef}
         className={`flex flex-row items-center justify-between w-full px-4 md:px-12
-        font-bold uppercase lg:text-lg text-white 
-         ${scrolledPastNav || isOpen ? "fixed top-0  pt-6 pb-12" : "py-6"}
-         ${backgroundColor()}
+        font-bold uppercase lg:text-lg text-white fixed top-0 z-40
+         ${
+           isOpen
+             ? "pt-6 pb-12 bg-blue-300"
+             : "py-6 bg-gradient-to-b from-blue-400 via-blue-400/50 to-transparent"
+         }
         `}
       >
         <div
@@ -77,7 +67,7 @@ const Navigation = ({
         </div>
         <div className="block md:hidden">
           <button
-            className="clickable-white-icon"
+            className="text-3xl md:text-5xl text-white hover:text-blue-900 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -92,7 +82,7 @@ const Navigation = ({
                   scrollTo(s);
                   setIsOpen(false);
                 }}
-                className="py-4 text-lg uppercase hover:text-blue-900 border-t-2"
+                className="py-4 text-lg uppercase hover:bg-blue-300 hover:text-blue-900 border-t-2"
               >
                 {s}
               </button>

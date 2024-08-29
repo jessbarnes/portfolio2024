@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Header from "./sections/header";
 import Work from "./sections/work";
 import Projects from "./sections/projects";
@@ -6,10 +6,9 @@ import Skills from "./sections/skills";
 import Footer from "./sections/footer";
 import Navigation from "./sections/navigation";
 import Contact from "./sections/contact";
+import Stars from "./components/Stars";
 
 function App() {
-  const [scrolledPastNav, setScrolledPastNav] = useState(false);
-
   const topRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
@@ -42,21 +41,10 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolledPastNav(window.scrollY > 1);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="body-container">
-      <Navigation
-        scrolledPastNav={scrolledPastNav}
-        scrollTo={scrollTo}
-        sections={sections}
-      />
+    <div className="body-container overflow-x-hidden">
+      <Navigation scrollTo={scrollTo} sections={sections} />
+      <Stars position="top" />
       <div className={anchorStyle} ref={topRef} />
       <Header />
       <div className={anchorStyle} ref={workRef} />
@@ -68,6 +56,7 @@ function App() {
       <div className={anchorStyle} ref={contactRef} />
       <Contact />
       <Footer />
+      <Stars position="bottom" />
     </div>
   );
 }
