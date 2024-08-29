@@ -16,7 +16,7 @@ function App() {
 
   const sections = ["work", "projects", "skills", "contact"];
 
-  const anchorStyle = "h-0 m-0 pb-24";
+  const anchorStyle = "pb-12"; // Allows header to be visible below navbar
 
   const scrollTo = (location: string) => {
     switch (location) {

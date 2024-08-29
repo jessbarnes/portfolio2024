@@ -1,4 +1,4 @@
-type History = {
+type Job = {
   company: string;
   title: string;
   startDate: string;
@@ -6,7 +6,7 @@ type History = {
   description: string;
 };
 
-const history: History[] = [
+const jobs: Job[] = [
   {
     company: "Combined Curiosity",
     title: "Software Engineer II",
@@ -33,4 +33,4 @@ const history: History[] = [
   },
 ];
 
-export default history;
+export default jobs;

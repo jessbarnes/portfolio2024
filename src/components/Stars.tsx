@@ -13,27 +13,25 @@ const Star = ({
   };
 
   const randomX = Math.random() * viewportWidth;
-  let randomY = 0;
-  if (position === "top") {
-    randomY = Math.random() * (viewportWidth > 768 ? 800 : 400) + 50;
-  } else {
-    randomY = -(Math.random() * (viewportWidth > 768 ? 800 : 400) + 50);
+  let randomY = Math.random() * (viewportWidth > 768 ? 800 : 400) + 50;
+  if (position !== "top") {
+    randomY = -randomY;
   }
 
   const rotation = Math.random() * 360;
 
-  let opacity = 50;
+  let opacity = 0.7;
   if (position === "top") {
     if (randomY > 600) {
-      opacity = 10;
+      opacity = 0.1;
     } else if (randomY > 200) {
-      opacity = 20;
+      opacity = 0.3;
     }
   } else {
     if (randomY < -200) {
-      opacity = 10;
+      opacity = 0.1;
     } else if (randomY < -600) {
-      opacity = 20;
+      opacity = 0.3;
     }
   }
 
@@ -44,10 +42,11 @@ const Star = ({
         top: randomY,
         transform: `rotate(${rotation}deg)`,
         pointerEvents: "none", // Prevent interaction with the floating text
+        opacity,
       }}
       className={`absolute text-lg ${
         position === "top" ? "text-white" : "text-blue-400"
-      } opacity-${opacity}`}
+      }`}
     >
       {symbol()}
     </div>
@@ -60,9 +59,20 @@ const Stars = ({ position }: { position: "top" | "bottom" }) => {
   const amount = viewportWidth > 768 && position === "top" ? 500 : 100;
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setViewportWidth(window.innerWidth);
-    });
+    let resizeTimer: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        setViewportWidth(window.innerWidth);
+      }, 50);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimer);
+    };
   }, []);
 
   return (

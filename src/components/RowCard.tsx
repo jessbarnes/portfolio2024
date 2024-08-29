@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
+export const BaseCardStyle =
+  "relative flex flex-col bg-white bg-opacity-10 rounded-lg p-2 md:p-4 w-full";
+
 const RowCard = ({
   title,
   subtitle,
@@ -22,7 +25,7 @@ const RowCard = ({
     return (
       <div
         key={`card-${title}-${subtitle}`}
-        className="relative flex flex-col bg-white bg-opacity-10 rounded-lg p-2 md:p-4 w-full"
+        className={BaseCardStyle}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex flex-row items-center justify-between">

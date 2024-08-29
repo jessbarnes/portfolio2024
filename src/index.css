@@ -19,7 +19,7 @@ code {
 /* custom tailwind classes */
 
 .body-container {
-  @apply bg-gradient-to-b from-blue-400 to-gray-900 gap-6 flex flex-col items-center justify-between min-h-screen;
+  @apply bg-gradient-to-b from-blue-400 to-gray-900 flex flex-col items-center justify-between min-h-screen;
 }
 
 .section-container {
@@ -36,11 +36,16 @@ code {
 
 .section-container p,
 h1,
+h2,
 h3 {
   @apply text-white;
 }
 
 .section-container h1 {
+  @apply text-2xl md:text-3xl font-bold tracking-widest uppercase pb-4;
+}
+
+.section-container h2 {
   @apply text-xl md:text-2xl font-bold;
 }
 
@@ -53,7 +58,7 @@ h3 {
 }
 
 .clickable-white-icon {
-  @apply text-3xl md:text-5xl text-white hover:text-blue-500 cursor-pointer;
+  @apply z-10 text-5xl text-white hover:text-blue-500 cursor-pointer;
 }
 
 .text-link {

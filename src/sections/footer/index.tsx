@@ -8,8 +8,8 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="-mb-6 border-t border-gray-700 relative w-full">
-        <div className="absolute -top-5 md:-top-8 text-white w-full flex justify-center">
+      <div className="mt-12 mb-4 border-t border-gray-700 relative w-full">
+        <div className="absolute -top-8 md:-top-8 text-white w-full flex justify-center">
           <button
             className="clickable-white-icon"
             onClick={() => window.scrollTo(0, 0)}
@@ -39,7 +39,7 @@ const Footer = () => {
               <AiFillLinkedin className="clickable-white-icon" />
             </a>
           </div>
-          <p className="text-xs md:text-sm -mb-2">© JB 2024</p>
+          <p className="text-sm">© JB 2024</p>
         </div>
       </div>
     </>
