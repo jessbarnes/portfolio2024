@@ -7,7 +7,7 @@
 - Added contact section, linked resume
 - Updated navigation to its own component
 - Updated work and footer sections
-- Updated README
+- Updated README and placeholder logo
 - Updated mobile styling
 
 ## 0.1.0
