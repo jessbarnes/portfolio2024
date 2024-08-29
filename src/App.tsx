@@ -44,7 +44,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolledPastNav(window.scrollY > 300);
+      setScrolledPastNav(window.scrollY > 1);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -52,12 +52,13 @@ function App() {
 
   return (
     <div className="body-container">
-      <Header />
       <Navigation
         scrolledPastNav={scrolledPastNav}
         scrollTo={scrollTo}
         sections={sections}
       />
+      <div className={anchorStyle} ref={topRef} />
+      <Header />
       <div className={anchorStyle} ref={workRef} />
       <Work />
       <div className={anchorStyle} ref={projectsRef} />
