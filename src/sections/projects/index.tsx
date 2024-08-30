@@ -20,7 +20,7 @@ const Projects = () => {
           />
         ))}
         <h2>Personal</h2>
-        {personalProjects.map((p) => (
+        {sortByDate(personalProjects).map((p) => (
           <RowCard
             key={`project-${p.title}`}
             title={p.title}

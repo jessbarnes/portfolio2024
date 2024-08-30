@@ -43,7 +43,7 @@ const Navigation = ({
         `}
       >
         <div
-          className="tracking-wider hover:text-blue-900 cursor-pointer"
+          className="tracking-wider hover:text-blue-900 transition-all duration-500 cursor-pointer"
           onClick={() => {
             scrollTo("top");
             setIsOpen(false);
@@ -59,7 +59,7 @@ const Navigation = ({
                 scrollTo(s);
                 setIsOpen(false);
               }}
-              className="uppercase hover:text-blue-900"
+              className="uppercase hover:text-blue-900 transition-all duration-500"
             >
               {s}
             </button>
@@ -67,7 +67,7 @@ const Navigation = ({
         </div>
         <div className="block md:hidden">
           <button
-            className="text-3xl md:text-5xl text-white hover:text-blue-900 cursor-pointer"
+            className="text-3xl md:text-5xl text-white hover:text-blue-900 transition-all duration-500 cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -82,7 +82,7 @@ const Navigation = ({
                   scrollTo(s);
                   setIsOpen(false);
                 }}
-                className="py-4 text-lg uppercase hover:bg-blue-300 hover:text-blue-900 border-t-2"
+                className="py-4 text-lg uppercase hover:bg-blue-300 hover:text-blue-900 transition-all duration-500 border-t-2"
               >
                 {s}
               </button>

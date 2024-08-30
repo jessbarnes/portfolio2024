@@ -53,8 +53,20 @@ const RowCard = ({
       </div>
       {subtitle && <p className="font-semibold pb-2">{subtitle}</p>}
       {description && (
-        <p className={isExpanded ? "h-fit opacity-100" : "h-0 overflow-hidden"}>
-          {description}
+        <p
+          onClick={(e) => e.stopPropagation()}
+          className={
+            isExpanded
+              ? "h-fit opacity-100 cursor-default"
+              : "h-0 overflow-hidden"
+          }
+        >
+          {description.split("\n").map((line, index) => (
+            <span key={`card-${title}-${subtitle}-desc-${index}`}>
+              {line}
+              {index < description.split("\n").length - 1 && <br />}
+            </span>
+          ))}
         </p>
       )}
       {body}

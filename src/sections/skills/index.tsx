@@ -1,6 +1,5 @@
 import { BaseCardStyle } from "../../components/RowCard";
-import skills from "./skills";
-import tools from "./tools";
+import { languages, tools } from "./list";
 
 const Skills = () => {
   return (
@@ -9,11 +8,11 @@ const Skills = () => {
         <h1>Skills</h1>
         <h2>Languages</h2>
         <div className={BaseCardStyle}>
-          <p>{skills.map((s) => s).join(", ")}</p>
+          <p>{languages.map((l) => l).join(", ")}</p>
         </div>
         <h2>Technologies</h2>
         <div className={BaseCardStyle}>
-          <p>{tools.map((s) => s).join(", ")}</p>
+          <p>{tools.map((t) => t).join(", ")}</p>
         </div>
       </div>
     </div>
