@@ -4,7 +4,9 @@ const Header = () => {
       <h1 className="text-4xl lg:text-6xl font-bold text-white tracking-wider">
         Jessica Barnes
       </h1>
-      <h2 className="text-2xl lg:text-4xl text-white">Software Engineer</h2>
+      <h2 className="text-2xl lg:text-4xl text-white">
+        Software Engineer Portfolio
+      </h2>
     </div>
   );
 };

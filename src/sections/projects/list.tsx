@@ -50,8 +50,8 @@ export const workProjects: Project[] = [
   {
     title: "Conveyor Display and Editor",
     company: "StuffRaiser - SD",
-    startDate: "2022-10-01",
-    endDate: "2022-10-31",
+    startDate: "2021-1-01",
+    endDate: "2021-12-31",
     description: `Built a live conveyor display for book processing. Users could watch as the book cover appeared on screen after it was scanned and sent down the line, then move on screen into its corresponding destination’s box.
 
       Tracked destination, capacity, and location of gaylords and smaller boxes in the warehouse with barcodes. Created a move page to use with a phone’s camera to scan a box’s barcode, then a static location’s barcode, to update within the system. New barcodes could be easily printed from this page.

@@ -14,11 +14,11 @@ const Contact = () => {
             alt="profile"
           />
           <RowCard
-            title="Thank you for your interest!"
+            title="Thank you for checking out my portfolio!"
             body={
               <div className="flex flex-col gap-2 pt-2">
                 <p>
-                  Check out the site's source code on{" "}
+                  I've made the site's source code available publicly on{" "}
                   <a
                     href="https://github.com/jessbarnes/portfolio2024"
                     target="_blank"
@@ -26,7 +26,7 @@ const Contact = () => {
                   >
                     github
                   </a>
-                  ! I built it from scratch.
+                  .
                 </p>
                 <p>
                   Want to build something together? Access my resume{" "}
