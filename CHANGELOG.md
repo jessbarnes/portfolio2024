@@ -2,13 +2,14 @@
 
 ## 0.1.1
 
-- Added formatDate util
 - Added RowCard component
+- Added formatDate and sortByDate utils
 - Added contact section, linked resume
+- Added content to all sections
+- Added stars
 - Updated navigation to its own component
-- Updated work and footer sections
 - Updated README and placeholder logo
-- Updated mobile styling
+- Updated mobile styling and index.css
 
 ## 0.1.0
 
