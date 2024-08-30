@@ -1,0 +1,31 @@
+export const languages: string[] = [
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Node",
+  "Next",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "SQL",
+  "Git",
+  "Python",
+];
+
+export const tools: string[] = [
+  "Supabase",
+  "Prisma",
+  "AWS",
+  "Visual Studio Code",
+  "Figma",
+  "Postman",
+  "Postico",
+  "Retool",
+  "Github",
+  "Linear",
+  "Slack",
+  "Tuple",
+  "Vercel",
+  "Notion",
+];

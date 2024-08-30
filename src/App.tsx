@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Header from "./sections/header";
 import Work from "./sections/work";
 import Projects from "./sections/projects";
 import Skills from "./sections/skills";
 import Footer from "./sections/footer";
+import Navigation from "./sections/navigation";
+import Contact from "./sections/contact";
+import Stars from "./components/Stars";
 
 function App() {
-  const [scrolledPastNav, setScrolledPastNav] = useState(false);
-
-  const topRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -16,10 +16,12 @@ function App() {
 
   const sections = ["work", "projects", "skills", "contact"];
 
+  const anchorStyle = "pb-12"; // Allows header to be visible below navbar
+
   const scrollTo = (location: string) => {
     switch (location) {
       case "top":
-        topRef.current?.scrollIntoView();
+        window.scrollTo(0, 0);
         break;
       case "work":
         workRef.current?.scrollIntoView();
@@ -38,53 +40,21 @@ function App() {
     }
   };
 
-  const Navigation = () => (
-    <div
-      className={`flex flex-row items-center justify-between w-full px-12 lg:justify-evenly ${
-        scrolledPastNav
-          ? "fixed top-0 bg-gradient-to-b from-white via-white/50 to-transparent pt-6 pb-12"
-          : "py-6"
-      }`}
-    >
-      {(scrolledPastNav ? ["top", ...sections] : sections).map((s) => (
-        <button
-          onClick={() => scrollTo(s)}
-          className={`font-bold uppercase lg:text-lg ${
-            scrolledPastNav
-              ? "text-blue-800 hover:text-black"
-              : "text-white hover:text-blue-900"
-          }`}
-        >
-          {s}
-        </button>
-      ))}
-    </div>
-  );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolledPastNav(window.scrollY > 300);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className="body-container">
-      <div className="h-0 m-0 p-0" ref={topRef} />
+    <div className="body-container overflow-x-hidden">
+      <Navigation scrollTo={scrollTo} sections={sections} />
+      <Stars position="top" />
       <Header />
-      <Navigation />
-      <div className="h-0 m-0 p-0 pb-24" ref={workRef} />
+      <div className={anchorStyle} ref={workRef} />
       <Work />
-      <div className="h-[1000px]">1000px height buffer</div>
-      <div className="h-0 m-0 p-0 pb-24" ref={projectsRef} />
+      <div className={anchorStyle} ref={projectsRef} />
       <Projects />
-      <div className="h-[1000px]">1000px height buffer</div>
-      <div className="h-0 m-0 p-0 pb-24" ref={skillsRef} />
+      <div className={anchorStyle} ref={skillsRef} />
       <Skills />
-      <div className="h-[1000px]">1000px height buffer</div>
-      <div className="h-0 m-0 p-0 pb-24" ref={contactRef} />
+      <div className={anchorStyle} ref={contactRef} />
+      <Contact />
       <Footer />
+      <Stars position="bottom" />
     </div>
   );
 }

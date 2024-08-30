@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: "Futura", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,15 +19,38 @@ code {
 /* custom tailwind classes */
 
 .body-container {
-  @apply bg-gradient-to-b from-blue-400 to-gray-900 gap-6 flex flex-col items-center justify-between min-h-screen;
+  @apply bg-gradient-to-b from-blue-400 to-gray-900 flex flex-col items-center justify-between min-h-screen;
 }
 
 .section-container {
-  @apply flex flex-row items-center justify-between px-12 py-6 w-full lg:w-3/4;
+  @apply flex flex-row items-center justify-between px-4 md:px-12 py-6 w-full md:w-3/4 lg:w-3/5;
 }
 
-.section-container p {
+.section-subcontainer {
+  @apply flex flex-col items-center justify-between gap-4 w-full;
+}
+
+.section-container a {
+  @apply text-blue-300 hover:text-blue-500 cursor-pointer underline;
+}
+
+.section-container p,
+h1,
+h2,
+h3 {
   @apply text-white;
+}
+
+.section-container h1 {
+  @apply text-2xl md:text-3xl font-bold tracking-widest uppercase pb-4;
+}
+
+.section-container h2 {
+  @apply text-xl md:text-2xl font-bold;
+}
+
+.section-container h3 {
+  @apply md:text-lg font-bold;
 }
 
 .white-icon {
@@ -35,7 +58,7 @@ code {
 }
 
 .clickable-white-icon {
-  @apply text-5xl text-white hover:text-blue-500 cursor-pointer;
+  @apply z-10 text-5xl text-white hover:text-blue-500 cursor-pointer;
 }
 
 .text-link {
