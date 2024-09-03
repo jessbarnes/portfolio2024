@@ -18,7 +18,8 @@ const Contact = () => {
             body={
               <div className="flex flex-col gap-2 pt-2">
                 <p>
-                  I've made the site's source code available publicly on{" "}
+                  Check my work! This site's source code is available publicly
+                  on{" "}
                   <a
                     href="https://github.com/jessbarnes/portfolio2024"
                     target="_blank"

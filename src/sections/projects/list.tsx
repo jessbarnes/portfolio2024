@@ -8,7 +8,7 @@ type Project = {
 
 export const workProjects: Project[] = [
   {
-    title: "Poll Management Tool",
+    title: "Poll Management System",
     company: "Combined Curiosity - SEII",
     startDate: "2024-1-01",
     endDate: "2024-8-1",
@@ -19,14 +19,14 @@ export const workProjects: Project[] = [
       Built a multi-layered form for the component within our admin site, and included a dynamic Mermaid web diagram with which a marketer could easily preview the branching paths they were building.`,
   },
   {
-    title: "Timer Management Tool",
+    title: "Timer Management System",
     company: "Combined Curiosity - SEII",
     startDate: "2023-12-01",
     endDate: "2024-3-1",
-    description: `Developed a tool to define schedules for repeating timers. Previously, marketers would edit individual Instapages by hand when timers ran out, so this relatively simple addition saved immeasurable headaches.`,
+    description: `Developed a tool to define schedules for repeating timers. Previously, marketers were required to edit individual Instapages by hand when timers ran out, so this addition saved immeasurable headaches.`,
   },
   {
-    title: "Shipping Management Tool",
+    title: "Shipping Management System",
     company: "Combined Curiosity - SEI",
     startDate: "2023-6-01",
     endDate: "2023-10-1",
@@ -38,17 +38,17 @@ export const workProjects: Project[] = [
     `,
   },
   {
-    title: "Learning Software and Video.js",
+    title: "Learning System",
     company: "Combined Curiosity - SEI",
     startDate: "2022-5-01",
     endDate: "2022-12-1",
     description: `Assisted in creation of a learning system, along with an admin site to populate and manage it. Designed the responsive styling of the learning site and the main content management admin page.
 
-      Built a custom Video.js player component, which accounted for brand styling as well as tracking a user's progress for them to easily pick up where they left off. Later on, introduced the ability for users to leave notes with recorded timestamps, and a Notebook page that listed them and linked back to the corresponding lesson.
+      Built a custom video player component, which accounted for brand styling as well as tracking a user's progress for them to easily pick up where they left off. Later on, introduced the ability for users to leave notes with recorded timestamps, and a Notebook page that listed them and linked back to the corresponding lesson.
     `,
   },
   {
-    title: "Conveyor Display and Editor",
+    title: "Conveyor System",
     company: "StuffRaiser - SD",
     startDate: "2021-1-01",
     endDate: "2021-12-31",

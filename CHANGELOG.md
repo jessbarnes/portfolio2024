@@ -1,5 +1,12 @@
 # jb-portfolio
 
+## 0.1.2
+
+- Added welcome
+- Updated section content to match resume improvements
+- Updated nav to smooth scroll
+- Fixed formatDate util to adjust for UTC
+
 ## 0.1.1
 
 - Added RowCard component

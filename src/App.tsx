@@ -7,6 +7,7 @@ import Footer from "./sections/footer";
 import Navigation from "./sections/navigation";
 import Contact from "./sections/contact";
 import Stars from "./components/Stars";
+import { AiFillCaretDown } from "react-icons/ai";
 
 function App() {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -21,19 +22,19 @@ function App() {
   const scrollTo = (location: string) => {
     switch (location) {
       case "top":
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: "smooth" });
         break;
       case "work":
-        workRef.current?.scrollIntoView();
+        workRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       case "projects":
-        projectsRef.current?.scrollIntoView();
+        projectsRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       case "skills":
-        skillsRef.current?.scrollIntoView();
+        skillsRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       case "contact":
-        contactRef.current?.scrollIntoView();
+        contactRef.current?.scrollIntoView({ behavior: "smooth" });
         break;
       default:
         break;
@@ -45,6 +46,21 @@ function App() {
       <Navigation scrollTo={scrollTo} sections={sections} />
       <Stars position="top" />
       <Header />
+      <div className="section-container mt-8 mb-12 lg:mb-24">
+        <div className="section-subcontainer">
+          <div className="relative bg-white bg-opacity-10 rounded-full py-8 px-12 text-center">
+            <h2>Welcome!</h2>
+          </div>
+          <button
+            className="clickable-white-icon -mt-8 hover:!text-white/50 hover:-mt-7"
+            onClick={() =>
+              workRef.current?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            <AiFillCaretDown />
+          </button>
+        </div>
+      </div>
       <div className={anchorStyle} ref={workRef} />
       <Work />
       <div className={anchorStyle} ref={projectsRef} />

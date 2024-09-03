@@ -1,4 +1,4 @@
-export const languages: string[] = [
+export const mainSkills: string[] = [
   "TypeScript",
   "JavaScript",
   "React",
@@ -7,25 +7,9 @@ export const languages: string[] = [
   "HTML",
   "CSS",
   "Tailwind CSS",
+  "AWS",
   "PostgreSQL",
   "SQL",
-  "Git",
-  "Python",
-];
-
-export const tools: string[] = [
-  "Supabase",
-  "Prisma",
-  "AWS",
-  "Visual Studio Code",
-  "Figma",
-  "Postman",
-  "Postico",
-  "Retool",
   "Github",
-  "Linear",
-  "Slack",
-  "Tuple",
-  "Vercel",
-  "Notion",
+  "Figma",
 ];
