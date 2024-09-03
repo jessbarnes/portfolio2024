@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="absolute -top-8 md:-top-8 text-white w-full flex justify-center">
           <button
             className="clickable-white-icon"
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <AiFillCaretUp />
           </button>
