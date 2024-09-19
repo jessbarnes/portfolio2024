@@ -1,7 +1,7 @@
 # Jessica Barnes' 2024 Portfolio
 
 **[View the live site here](https://jessbarnes.github.io/portfolio2024)** \
-<small>_Last updated: 2024-09-03_</small>
+<small>_Last updated: 2024-09-19_</small>
 
 ---
 

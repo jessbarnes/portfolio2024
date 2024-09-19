@@ -15,7 +15,9 @@ const Work = () => {
             title={w.company}
             subtitle={w.title}
             dateRange={`
-                ${formatDate(w.startDate)} - ${formatDate(w.endDate)}`}
+                ${formatDate(w.startDate)} - ${
+              w.endDate ? formatDate(w.endDate) : "Current"
+            }`}
             description={w.description}
           />
         ))}

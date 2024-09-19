@@ -4,12 +4,21 @@ export const mainSkills: string[] = [
   "React",
   "Node",
   "Next",
+  "Native",
+  "Python",
   "HTML",
   "CSS",
+  "SQL",
+  "Git",
+];
+
+export const mainTools: string[] = [
   "Tailwind CSS",
+  "Docker",
   "AWS",
   "PostgreSQL",
-  "SQL",
-  "Github",
+  "Supabase",
+  "Vercel",
+  "Drip",
   "Figma",
 ];

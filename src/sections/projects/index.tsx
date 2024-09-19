@@ -15,7 +15,9 @@ const Projects = () => {
             title={p.title}
             subtitle={p.company}
             dateRange={`
-                ${formatDate(p.startDate)} - ${formatDate(p.endDate)}`}
+                ${formatDate(p.startDate)} - ${
+              p.endDate ? formatDate(p.endDate) : "Current"
+            }`}
             description={p.description}
           />
         ))}
@@ -26,7 +28,9 @@ const Projects = () => {
             title={p.title}
             subtitle={p.company}
             dateRange={`
-                ${formatDate(p.startDate)} - ${formatDate(p.endDate)}`}
+                ${formatDate(p.startDate)} - ${
+              p.endDate ? formatDate(p.endDate) : "Current"
+            }`}
             description={p.description}
           />
         ))}

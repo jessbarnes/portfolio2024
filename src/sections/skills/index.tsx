@@ -1,5 +1,5 @@
 import { BaseCardStyle } from "../../components/RowCard";
-import { mainSkills } from "./list";
+import { mainSkills, mainTools } from "./list";
 
 const Skills = () => {
   return (
@@ -8,7 +8,8 @@ const Skills = () => {
         <h1>Skills</h1>
         <div className={BaseCardStyle}>
           <h3>My main stack is:</h3>
-          <p>{mainSkills.map((m) => m).join(", ")}</p>
+          <p>{mainSkills.map((m) => m).join(", ")},</p>
+          <p>{mainTools.map((m) => m).join(", ")}</p>
           <br />
           <p>
             This is what I'm most familiar with, but I'm adaptive and quick to

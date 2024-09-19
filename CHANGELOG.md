@@ -1,5 +1,10 @@
 # jb-portfolio
 
+## 0.1.3
+
+- Added Stridz project
+- Updated skills
+
 ## 0.1.2
 
 - Added welcome
