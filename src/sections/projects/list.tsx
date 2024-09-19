@@ -8,13 +8,6 @@ type Project = {
 
 export const workProjects: Project[] = [
   {
-    title: "Stridz",
-    company: "",
-    startDate: "2024-9-01",
-    endDate: "",
-    description: `Took over development of a year old educational finance platform, written in Typescript and integrated with Vercel and React Native to deploy on iOS and Android. Currently implementing monetization via subscriptions.`,
-  },
-  {
     title: "Poll Management System",
     company: "Combined Curiosity - SEII",
     startDate: "2024-1-01",
@@ -69,9 +62,15 @@ export const workProjects: Project[] = [
 
 export const personalProjects: Project[] = [
   {
+    title: "Stridz",
+    startDate: "2024-9-01",
+    endDate: "",
+    description: `Took over development of a year old educational finance platform, written in Typescript and integrated with Vercel and React Native to deploy on iOS and Android. Currently implementing monetization via subscriptions.`,
+  },
+  {
     title: "Portfolio",
-    startDate: "2023-10-01",
-    endDate: "2024-8-1",
+    startDate: "2024-8-01",
+    endDate: "2024-9-1",
     description:
       "You are here! I built this static site using React and hosted it on Github Pages. It's written in TypeScript and styled with TailwindCSS.",
   },

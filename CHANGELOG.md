@@ -1,5 +1,9 @@
 # jb-portfolio
 
+## 0.1.4
+
+- Updated project dates
+
 ## 0.1.3
 
 - Added Stridz project
